@@ -41,34 +41,15 @@ Only the team lead appears in the agent picker. All others are subagents invoked
 
 ## Setup
 
-1. Clone this repo (or download it)
-2. Copy the agent files and instructions into your project:
-
-```bash
-# From your project root:
-mkdir -p .github/agents
-
-# Copy all agents
-cp /path/to/copilot-orchestra/*.agent.md .github/agents/
-```
-
-3. Open your project in VS Code with GitHub Copilot
-4. In the chat panel, select **team-lead** from the agent picker
-5. Describe your task
+1. Clone this repo (or download it) into your project as `.github/agents/` and `.github/copilot-instructions.md`
+2. Open your project in VS Code with GitHub Copilot
+3. In the chat panel, select **team-lead** from the agent picker
+4. Describe your task
 
 > **Tip:** Edit `.github/copilot-instructions.md` to add your project-specific conventions (language, framework, testing tools, etc.)
 
 ## File Structure
 
-This repo (template):
-```
-*.agent.md                  ← agent definitions
-.github/
-  copilot-instructions.md   ← workspace-wide instructions
-README.md
-```
-
-Your project (after setup):
 ```
 .github/
   agents/
@@ -83,6 +64,7 @@ Your project (after setup):
     debugger.agent.md           ← subagent
     documenter.agent.md         ← subagent
   copilot-instructions.md       ← workspace-wide instructions
+README.md
 ```
 
 ## Model Configuration

@@ -2,7 +2,7 @@
 description: 'Writes documentation, READMEs, API docs, inline comments, and changelogs'
 argument-hint: What was built and who the audience is
 tools: ['edit', 'search', 'read']
-model: Claude Haiku 4.5 (copilot)
+model: Claude Sonnet 4.6 (copilot)
 user-invocable: false
 ---
 You are a DOCUMENTER — part of a development team managed by a TEAM LEAD.
