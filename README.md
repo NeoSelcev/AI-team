@@ -23,11 +23,11 @@ Agents communicate through the team lead using `ROUTE_SUGGESTION:` — if the re
 | **researcher** | Explores codebase, gathers facts, reads docs | Sonnet 4.6 |
 | **architect** | Design decisions, system structure, API design | Opus 4.6 |
 | **implementer** | Writes code following TDD principles | Sonnet 4.6 |
-| **qa** | Writes tests, runs suites, checks coverage | Haiku 4.5 |
+| **qa** | Writes tests, runs suites, checks coverage | Sonnet 4.6 |
 | **reviewer** | Reviews changes for quality and correctness | Sonnet 4.6 |
 | **security-auditor** | Audits for OWASP Top 10 vulnerabilities | Opus 4.6 |
 | **debugger** | Diagnoses failures, traces bugs, finds root causes | Sonnet 4.6 |
-| **documenter** | Writes READMEs, API docs, changelogs | Haiku 4.5 |
+| **documenter** | Writes READMEs, API docs, changelogs | Sonnet 4.6 |
 
 Only the team lead appears in the agent picker. All others are subagents invoked automatically.
 
@@ -69,13 +69,12 @@ README.md
 
 ## Model Configuration
 
-Agents ship with Anthropic Claude defaults. The models are assigned in three tiers based on the reasoning depth each role needs:
+Agents ship with Anthropic Claude defaults. The models are assigned in two tiers based on the reasoning depth each role needs:
 
 | Tier | Role | Default (Anthropic) | OpenAI Equivalent | Google Equivalent |
 |------|------|--------------------|--------------------|--------------------|
 | **1 — Deep reasoning** | team-lead, architect, security-auditor | Claude Opus 4.6 | GPT-5.2 Thinking | Gemini 3.1 Pro |
-| **2 — Analysis** | planner, researcher, reviewer, debugger, implementer | Claude Sonnet 4.6 | GPT-5.2 | Gemini 3 Pro |
-| **3 — Fast execution** | qa, documenter | Claude Haiku 4.5 | GPT-5 Mini / Nano | Gemini 3 Flash |
+| **2 — Analysis & execution** | planner, researcher, reviewer, debugger, implementer, qa, documenter | Claude Sonnet 4.6 | GPT-5.2 | Gemini 3 Pro |
 
 To switch providers, edit the `model:` field in each agent's YAML frontmatter. The format is `Model Name (copilot)` — for example, `GPT-5.2 (copilot)` or `Gemini 3 Pro (copilot)`.
 

@@ -14,9 +14,9 @@ This is a multi-agent development team for GitHub Copilot. The workspace contain
 The team lead follows this sequence:
 1. Research (researcher) → Plan (planner) → User approval
 2. For each unit: Implement (implementer) → Test (qa) → Review (reviewer)
-3. Security review when applicable (security-auditor)
+3. As needed: Architecture input (architect), security review (security-auditor), debugging (debugger)
 4. Mandatory stop after each unit for user commit
-5. Final test suite run → documentation → completion
+5. Final test suite run → documentation (documenter) → completion
 
 ### Plan Files
 
